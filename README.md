@@ -1,5 +1,7 @@
 # 🛡️ AI Eraser | Vibe Coded Privacy Tool
 
+![AI Eraser Hero](https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=2070&auto=format&fit=crop)
+
 ![Vibe Coding](https://img.shields.org/badge/VIBE-CODED-8A2BE2?style=for-the-badge&logo=codepen&logoColor=white) ![AI Powered](https://img.shields.org/badge/AI-POWERED-00C4CC?style=for-the-badge&logo=tensorflow&logoColor=white) ![Privacy First](https://img.shields.org/badge/PRIVACY-100%25-10B981?style=for-the-badge&logo=shield&logoColor=white)
 
 > **"Privacy is not an option, it's a vibe."**
@@ -7,6 +9,8 @@
 ## 🚀 Overview
 
 **AI Eraser** is a cutting-edge, browser-based privacy tool designed to instantly redact sensitive information from your images. Powered by advanced **TensorFlow.js** models, it detects and blurs faces, body parts, license plates, and private text with a single click—all running locally on your device for maximum security.
+
+![Security Visualization](https://images.unsplash.com/photo-1633412802994-5c058f151b66?q=80&w=2080&auto=format&fit=crop)
 
 This project was built with the **Vibe Coding** philosophy: coding with flow, intuition, and a focus on user experience and aesthetics.
 
