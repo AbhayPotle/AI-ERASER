@@ -41,6 +41,35 @@ This project was built with the **Vibe Coding** philosophy: coding with flow, in
 
 ---
 
+## 🧠 Deep Dive: How it Works
+
+### 1. Progressive AI Detection Engine
+The core of the project lies in `aiService.ts`. AI Eraser uses a **Multi-Model Fusion** strategy to ensure nothing is missed:
+
+*   **Face Detection (Triple-Check)**:
+    *   **BlazeFace**: A lightning-fast model for close-up frontal faces. We implemented **Multi-Scale Tiling**—a process where the image is sliced into overlapping crops, scanned individually, and results are mapped back to the main canvas.
+    *   **SSD MobileNet V1**: A robust detector that specializes in finding faces at various angles and scales.
+    *   **COCO-SSD Head Estimation**: As a fail-safe, the engine uses object detection to find "persons" and intelligently estimates the head region even if the face itself is partially occluded.
+*   **Body Segmentation**:
+    *   Utilizes **BodyPix** to generate a real-time pixel-perfect mask of human figures for natural-looking blurring.
+*   **OCR & Text Heuristics**:
+    *   Uses **Tesseract.js** to extract text. A custom regex engine identifies sensitive patterns like emails, phone numbers, and license plate sequences.
+
+### 2. 🛡️ Privacy-First Architecture
+*   **100% Client-Side**: All AI models (TensorFlow.js) are loaded and executed directly in your browser.
+*   **No Server Uploads**: Images stay on your local machine. Ideal for confidential documents or personal photos.
+
+### 3. 🔥 "Vibe Coding" & Modern Aesthetics
+*   **Glassmorphism**: Semi-transparent backgrounds with `backdrop-filter: blur(10px)` and white borders for a premium, futuristic look.
+*   **Interactive Design**: Custom controls and smooth CSS transitions provide a responsive feel.
+
+### 4. 🛠️ Technical Fixes & Optimizations
+*   **Parallelism**: All detection models run in parallel using `Promise.all` to reduce processing time.
+*   **IoU De-duplication**: Implemented an **Intersection over Union (IoU)** algorithm to merge overlapping detection boxes into clean regions.
+*   **Build Optimization**: Custom asset pipeline management to ensure high performance and reliability across different environments.
+
+---
+
 ## 📸 Screenshots
 
 *(Add your awesome screenshots here)*
