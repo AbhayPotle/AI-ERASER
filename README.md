@@ -10,7 +10,7 @@
 
 **AI Eraser** is a cutting-edge, browser-based privacy tool designed to instantly redact sensitive information from your images. Powered by advanced **TensorFlow.js** models, it detects and blurs faces, body parts, license plates, and private text with a single click—all running locally on your device for maximum security.
 
-![Security Visualization](https://images.unsplash.com/photo-1633412802994-5c058f151b66?q=80&w=2080&auto=format&fit=crop)
+![Security Visualization]
 
 This project was built with the **Vibe Coding** philosophy: coding with flow, intuition, and a focus on user experience and aesthetics.
 
